@@ -150,3 +150,24 @@
 // window.addEventListener('click', (e) => {
 //     console.log(e);
 // });
+
+// let userName = prompt('Enter Your Name');
+// let obj = {
+//     name: "Alireza"
+// }
+// let arr = ["mamad", "reza", "parsa"]
+
+// let serialized = JSON.stringify(obj);
+
+// localStorage.setItem("user1", serialized);
+
+// let user = localStorage.getItem("user");
+// console.log(JSON.parse(user));
+
+// localStorage.removeItem('user2');
+
+// console.log(localStorage.length);
+
+// let tasks = ['First Task', 'Second Task', 'Third Task'];
+
+// console.log(JSON.parse(localStorage.getItem('tasks')).length);

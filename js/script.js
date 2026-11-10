@@ -171,3 +171,69 @@
 // let tasks = ['First Task', 'Second Task', 'Third Task'];
 
 // console.log(JSON.parse(localStorage.getItem('tasks')).length);
+
+/* Timeout and Interval */
+
+// let cancelBtn = document.getElementById('btn');
+
+// const timeout = setTimeout(() => {
+//     console.log("Hello World");
+// }, 5000);
+
+// cancelBtn.addEventListener('click', () => {
+//     clearTimeout(timeout);
+// });
+
+// let second = 55;
+// let minutes = 1;
+// const interval = setInterval(() => {
+//     console.log(minutes + ":" + second);
+//     if(second === 60){
+//         minutes++;
+//         second = 1;
+//     }else{
+//         second++;
+//     }
+// }, 1000);
+
+// let cancelBtn = document.getElementById('btn');
+
+// cancelBtn.addEventListener('click', () => {
+//     clearInterval(interval);
+// });
+
+/* Callback Function */
+// function greet(name, callback){
+//     const text = `Hello ${name}`;
+//     callback(text);
+// }
+
+// function print(value){
+//     console.log(value);
+//     document.write(value);
+// }
+
+// greet("Alireza", print);
+
+/* Promise */
+// let products = new Promise((resolve, rejected) => {
+//     let users = [];
+//     let request = fetch("https://jsonplaceholder.typicode.com/users")
+//         .then((response) => {
+//             users = response.json();
+//         })
+// });
+
+const getUsers = async () => {
+    let users = [];
+    await fetch("https://jsonplaceholder.typicode.com/users")
+        .then((response) => {
+            users = response.json();       
+        });
+    
+    return users;
+}
+
+getUsers().then((response) => {
+    console.log(response);
+}).then().catch;

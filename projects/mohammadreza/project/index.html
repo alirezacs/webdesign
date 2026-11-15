@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User List</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>لیست کاربران</h1>
+
+        <input type="text" id="name" placeholder="اسم خود را وارد کنید">
+        <input type="number" id="age" placeholder="سن  خود را وارد کنید">
+
+        <button onclick="addUser()">اضافه کردن</button>
+
+        <input type="text" id="search"
+        placeholder="جست و جو کردن" onkeyup="searchUser()">
+
+        <ul id="userList"></ul>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

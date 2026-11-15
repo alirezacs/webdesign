@@ -224,16 +224,60 @@
 //         })
 // });
 
-const getUsers = async () => {
-    let users = [];
-    await fetch("https://jsonplaceholder.typicode.com/users")
-        .then((response) => {
-            users = response.json();       
-        });
+// const getUsers = async () => {
+//     let users = [];
+//     await fetch("https://jsonplaceholder.typicode.com/users")
+//         .then((response) => {
+//             users = response.json();       
+//         });
     
-    return users;
-}
+//     return users;
+// }
 
-getUsers().then((response) => {
-    console.log(response);
-}).then().catch;
+// getUsers().then((response) => {
+//     console.log(response);
+// }).then().catch;
+
+// let marker = {
+//     color: "Green",
+//     size: 12,
+//     isWhiteBoard: true,
+//     write: () => {
+//         console.log("Ok");
+//     }
+// }
+
+let users = ["Alireza", "Mamareza", "Parsa", "Alireza", "Parsa", "Elyana", "Arezoo", "Vania", "Zhina"]
+// let users2 = ['jafar', 'mamad', 'asghar']
+
+// users.toString()
+// users.join("test")
+// users.pop();
+// Array.isArray(users)
+// delete users[0]
+// users.concat(users2)
+// users.slice(0, 4)
+
+// users.find((user) => {
+//     if (user === "Alireza"){
+//         console.log(user);
+//     }
+// })
+
+// users.map((user) => {
+//     console.log(user);
+// })
+
+// let btn = document.getElementById("btn");
+// btn.addEventListener("click", async () => {
+//     try{
+//         const response = await axios.get("https://jsonplaceholder.typicode.com/users");
+
+//         console.log(response.data);
+        
+
+//     }catch(error){
+//         console.log(error);
+        
+//     }
+// })

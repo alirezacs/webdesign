@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    padding: 40px 20px;
+    color: #222;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+h1 {
+    margin-bottom: 25px;
+    font-size: 30px;
+}
+
+.album-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.album {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 18px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+    gap: 20px;
+    transition: transform 0.2s;
+}
+
+.album:hover {
+    transform: translateY(-3px);
+}
+
+.album img {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.album-info {
+    flex: 1;
+}
+
+.album-info h2 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.album-info p {
+    color: #777;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.details-btn {
+    text-decoration: none;
+    background: #635bff;
+    color: white;
+    padding: 11px 20px;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.details-btn:hover {
+    background: #4840d4;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 20px 12px;
+    }
+
+    .album {
+        gap: 12px;
+        padding: 12px;
+    }
+
+    .album img {
+        width: 75px;
+        height: 75px;
+    }
+
+    .album-info h2 {
+        font-size: 16px;
+    }
+
+    .details-btn {
+        padding: 9px 11px;
+        font-size: 12px;
+    }
+}
+
+.modal{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    width: 500px;
+    height: 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    padding: 20px;
+    gap: 10px;
+}
+.box img{
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+}

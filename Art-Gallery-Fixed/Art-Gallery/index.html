@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Art Gallery | گالری هنر</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" id="homeLink"><span class="brand-mark">✦</span><span>Art<span>Gallery</span></span></a>
+    <nav><a class="active" href="#home">خانه</a><a href="#albums">آلبوم‌ها</a><a href="#about">درباره ما</a></nav>
+    <div class="header-actions">
+      <label class="search-box"><span>⌕</span><input id="searchInput" type="search"
+          placeholder="جستجو در گالری..."></label>
+      <span class="user-badge" id="userBadge">مهمان</span><button class="btn btn-outline" id="authButton">ورود</button>
+    </div>
+  </header>
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow">گالری آنلاین هنر</p>
+        <h1>هنر را<br><em>زندگی کن.</em></h1>
+        <p class="hero-description">مجموعه‌ای از رنگ‌ها، احساسات و روایت‌ها؛ جایی برای کشف زیبایی در قاب نقاشی.</p>
+        <a class="btn btn-gold" href="#albums">تماشای آلبوم‌ها <span>←</span></a>
+        <div class="hero-foot"><span></span> هنر، زبان بی‌مرز احساس است</div>
+      </div>
+      <div class="hero-art"><img
+          src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=1500&q=90"
+          alt="اثر هنری نقاشی"></div>
+      <div class="hero-glow"></div>
+    </section>
+    <section class="albums-section" id="albums">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">مجموعه‌های منتخب</p>
+          <h2>آلبوم‌های <em>هنری</em></h2>
+        </div>
+        <button class="btn btn-gold" id="addAlbumBtn">＋ افزودن آلبوم</button>
+      </div>
+      <div class="album-grid" id="albumGrid"></div>
+      <div class="empty-state hidden" id="emptyState">آلبومی با این نام پیدا نشد.</div>
+    </section>
+    <section class="about-section" id="about"><span class="about-symbol">✦</span>
+      <div>
+        <p class="eyebrow">درباره گالری</p>
+        <h2>جایی برای دیدن، <em>حس کردن و الهام گرفتن</em></h2>
+      </div>
+      <p>این گالری فضایی برای گردآوری و نمایش آثار هنری است. آلبوم بسازید، آثار تازه اضافه کنید و مجموعه خود را مدیریت
+        کنید.</p>
+    </section>
+  </main>
+  <footer><span>© 2026 Art Gallery</span><span>ساخته‌شده برای عاشقان هنر</span></footer>
+
+  <dialog id="albumDialog" class="dialog">
+    <form id="albumForm" class="dialog-card">
+      <button type="button" class="close-btn" data-close="albumDialog">×</button>
+      <p class="eyebrow">مجموعه تازه</p>
+      <h2>افزودن آلبوم</h2>
+      <label>نام آلبوم<input name="title" required maxlength="40" placeholder="مثلاً نقاشی‌های طبیعت"></label>
+      <label>توضیح کوتاه<input name="description" required maxlength="90" placeholder="درباره این مجموعه..."></label>
+      <label>لینک تصویر کاور<input name="cover" type="url" required placeholder="https://..."></label>
+      <button class="btn btn-gold full" type="submit">ساخت آلبوم</button>
+    </form>
+  </dialog>
+
+  <dialog id="galleryDialog" class="dialog wide-dialog">
+    <div class="dialog-card gallery-dialog-card">
+      <button type="button" class="close-btn" data-close="galleryDialog">×</button>
+      <div class="gallery-title">
+        <div>
+          <p class="eyebrow">مجموعه آثار</p>
+          <h2 id="galleryTitle">آلبوم</h2>
+        </div><button class="btn btn-gold" id="addImageBtn">＋ افزودن اثر</button>
+      </div>
+      <p class="gallery-description" id="galleryDescription"></p>
+      <div class="artwork-grid" id="artworkGrid"></div>
+    </div>
+  </dialog>
+
+  <dialog id="imageDialog" class="dialog">
+    <form id="imageForm" class="dialog-card">
+      <button type="button" class="close-btn" data-close="imageDialog">×</button>
+      <p class="eyebrow">اثر تازه</p>
+      <h2>افزودن تصویر به آلبوم</h2>
+      <label>عنوان اثر<input name="title" required maxlength="50" placeholder="نام نقاشی"></label>
+      <label>لینک مستقیم تصویر<input name="url" type="url" required placeholder="https://..."></label>
+      <button class="btn btn-gold full" type="submit">افزودن تصویر</button>
+    </form>
+  </dialog>
+
+  <dialog id="authDialog" class="dialog">
+    <form id="authForm" class="dialog-card">
+      <button type="button" class="close-btn" data-close="authDialog">×</button>
+      <p class="eyebrow">به گالری خوش آمدید</p>
+      <h2>ورود کاربر</h2>
+      <label>نام<input name="firstName" required maxlength="24" autocomplete="given-name" placeholder="نام شما"></label>
+      <label>نام خانوادگی<input name="lastName" required maxlength="30" autocomplete="family-name"
+          placeholder="نام خانوادگی شما"></label>
+      <button class="btn btn-gold full" type="submit">ورود به گالری</button>
+      <small>این نسخه نمایشی است؛ ورود واقعی و حساب کاربری امن به بک‌اند نیاز دارد.</small>
+    </form>
+  </dialog>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

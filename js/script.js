@@ -281,3 +281,71 @@ let users = ["Alireza", "Mamareza", "Parsa", "Alireza", "Parsa", "Elyana", "Arez
         
 //     }
 // })
+
+/* Validation in JS */
+// let form = document.getElementById('form');
+
+// form.addEventListener('submit', e => {
+//     e.preventDefault();
+
+//     let email = document.getElementById('email').value;
+//     let password = document.getElementById('password').value;
+//     let phone = document.getElementById('phone').value;
+
+//     if(password.length < 8){
+//         alert("Password is to Short");
+//         return;
+//     }
+
+//     if(!email.includes('@')){
+//         alert("Email Is Incorrect");
+//         return;
+//     }
+
+//     var regex = new RegExp('^(\\+98|0)?9\\d{9}$');
+//     var result = regex.test(phone);
+
+//     if(!result){
+//         alert('Phone is Incorrect')
+//         return;
+//     }
+
+//     let obj = {
+//         name: "Alireza",
+//         hello: () => {
+//             console.log(this.name);
+//         }
+//     }
+    
+//     obj.hello();
+    
+//     const regex = /^[^@\s]+@[^@\s]+\.[^@\s]{2,}$/;
+//     if(!regex.test(email.trim())){
+//         alert("Email Is Incorrect");
+//     }
+        
+// })
+
+
+/* OOP in JS */
+class Car{
+    constructor(name, brand, color, tireCount){
+        this.name = name;
+        this.brand = brand;
+        this.color = color;
+        this.tireCount = tireCount;
+    }
+
+    move(){
+        console.log("Car Moved!");
+    }
+    showDetails(){
+        console.log(`Name of This Car is ${this.name}`);
+    }
+}
+
+let benz = new Car("Benz Cls-500", "Benz", "black", 4);
+let bmw = new Car("BMW M5", "BMW", "white", 4);
+
+bmw.showDetails(); 
+benz.showDetails();

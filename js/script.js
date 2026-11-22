@@ -328,24 +328,25 @@ let users = ["Alireza", "Mamareza", "Parsa", "Alireza", "Parsa", "Elyana", "Arez
 
 
 /* OOP in JS */
-class Car{
-    constructor(name, brand, color, tireCount){
-        this.name = name;
-        this.brand = brand;
-        this.color = color;
-        this.tireCount = tireCount;
-    }
+// class Car{
+//     constructor(name, brand, color, tireCount){
+//         this.name = name;
+//         this.brand = brand;
+//         this.color = color;
+//         this.tireCount = tireCount;
+//     }
 
-    move(){
-        console.log("Car Moved!");
-    }
-    showDetails(){
-        console.log(`Name of This Car is ${this.name}`);
-    }
-}
+//     move(){
+//         console.log("Car Moved!");
+//     }
+//     showDetails(){
+//         console.log(`Name of This Car is ${this.name}`);
+//     }
+// }
 
-let benz = new Car("Benz Cls-500", "Benz", "black", 4);
-let bmw = new Car("BMW M5", "BMW", "white", 4);
+// let benz = new Car("Benz Cls-500", "Benz", "black", 4);
+// let bmw = new Car("BMW M5", "BMW", "white", 4);
 
-bmw.showDetails(); 
-benz.showDetails();
+// bmw.showDetails(); 
+// benz.showDetails();
+

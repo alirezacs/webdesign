@@ -1,0 +1,258 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXORA | دنیای گیمینگ</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            NEXORA<span>.</span>
+        </div>
+
+        <nav class="navbar" id="navbar">
+            <a href="#home">خانه</a>
+            <a href="#games">بازی‌ها</a>
+            <a href="#news">اخبار</a>
+            <a href="#about">درباره ما</a>
+        </nav>
+
+        <div class="header-left">
+            <span id="clock">00:00:00</span>
+            <button class="theme-btn" id="themeBtn">☀️</button>
+            <button class="menu-btn" id="menuBtn">☰</button>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <span class="small-title">WELCOME TO NEXORA</span>
+
+            <h1>
+                وارد دنیای
+                <span>بازی‌ها</span>
+                شو!
+            </h1>
+
+            <p>
+                جدیدترین بازی‌ها، اخبار دنیای گیمینگ و
+                تجربه‌ای متفاوت از دنیای سرگرمی.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#games" class="main-btn">مشاهده بازی‌ها</a>
+                <a href="#about" class="second-btn">بیشتر بدانید</a>
+            </div>
+        </div>
+
+        <div class="hero-label">
+            <span>LEVEL UP YOUR WORLD</span>
+            <h2>NEXORA GAMING</h2>
+        </div>
+    </section>
+
+    <!-- Statistics -->
+    <section class="stats">
+        <div class="stat-box">
+            <h2>+120</h2>
+            <p>بازی معرفی‌شده</p>
+        </div>
+
+        <div class="stat-box">
+            <h2>+50K</h2>
+            <p>بازدیدکننده</p>
+        </div>
+
+        <div class="stat-box">
+            <h2>+300</h2>
+            <p>اخبار منتشرشده</p>
+        </div>
+
+        <div class="stat-box">
+            <h2>24/7</h2>
+            <p>همیشه همراه شما</p>
+        </div>
+    </section>
+
+    <!-- Games -->
+    <section class="games section" id="games">
+
+        <div class="section-title">
+            <span>OUR COLLECTION</span>
+            <h2>بازی‌های محبوب</h2>
+            <p>بازی مورد علاقه خودت رو پیدا کن.</p>
+        </div>
+
+        <div class="search-box">
+            <input type="text" id="searchInput"
+                   placeholder="جست‌وجوی نام بازی...">
+        </div>
+
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">همه</button>
+            <button class="filter-btn" data-filter="action">اکشن</button>
+            <button class="filter-btn" data-filter="adventure">ماجراجویی</button>
+            <button class="filter-btn" data-filter="sport">ورزشی</button>
+        </div>
+
+        <div class="game-container" id="gameContainer">
+
+            <div class="game-card" data-category="action">
+                <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800" alt="Cyberpunk">
+                <div class="game-info">
+                    <span>اکشن</span>
+                    <h3>Cyberpunk 2077</h3>
+                    <p>در دنیایی آینده‌نگرانه ماجراجویی کن.</p>
+                    <div class="game-bottom">
+                        <strong>⭐ 9.5</strong>
+                        <button class="details-btn" data-game="Cyberpunk 2077">جزئیات</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-card" data-category="adventure">
+                <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=800" alt="Gaming">
+                <div class="game-info">
+                    <span>ماجراجویی</span>
+                    <h3>Red Dead Redemption 2</h3>
+                    <p>سفری هیجان‌انگیز در غرب وحشی.</p>
+                    <div class="game-bottom">
+                        <strong>⭐ 9.8</strong>
+                        <button class="details-btn" data-game="Red Dead Redemption 2">جزئیات</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-card" data-category="sport">
+                <img src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=800" alt="Football">
+                <div class="game-info">
+                    <span>ورزشی</span>
+                    <h3>EA SPORTS FC</h3>
+                    <p>هیجان فوتبال را تجربه کن.</p>
+                    <div class="game-bottom">
+                        <strong>⭐ 9.2</strong>
+                        <button class="details-btn" data-game="EA SPORTS FC">جزئیات</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-card" data-category="action">
+                <img src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?w=800" alt="Gaming">
+                <div class="game-info">
+                    <span>اکشن</span>
+                    <h3>Call of Duty</h3>
+                    <p>تجربه‌ای پرهیجان از دنیای بازی.</p>
+                    <div class="game-bottom">
+                        <strong>⭐ 9.4</strong>
+                        <button class="details-btn" data-game="Call of Duty">جزئیات</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-card" data-category="adventure">
+                <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800" alt="Adventure">
+                <div class="game-info">
+                    <span>ماجراجویی</span>
+                    <h3>Adventure World</h3>
+                    <p>جهانی پر از رمز و راز و کشف.</p>
+                    <div class="game-bottom">
+                        <strong>⭐ 9.1</strong>
+                        <button class="details-btn" data-game="Adventure World">جزئیات</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-card" data-category="sport">
+                <img src="https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=800" alt="Football">
+                <div class="game-info">
+                    <span>ورزشی</span>
+                    <h3>Football Legends</h3>
+                    <p>رقابت در زمین مسابقه.</p>
+                    <div class="game-bottom">
+                        <strong>⭐ 8.9</strong>
+                        <button class="details-btn" data-game="Football Legends">جزئیات</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <p class="no-result" id="noResult">بازی موردنظر پیدا نشد!</p>
+
+    </section>
+
+    <!-- News -->
+    <section class="news section" id="news">
+        <div class="section-title">
+            <span>LATEST UPDATES</span>
+            <h2>آخرین اخبار گیمینگ</h2>
+            <p>جدیدترین اتفاقات دنیای بازی‌ها</p>
+        </div>
+
+        <div class="news-container">
+
+            <div class="news-card">
+                <img src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?w=800" alt="Gaming setup">
+                <div class="news-info">
+                    <span>اخبار تکنولوژی</span>
+                    <h3>آینده دنیای بازی‌های ویدیویی</h3>
+                    <p>فناوری‌های جدید چگونه تجربه بازی را تغییر می‌دهند؟</p>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <img src="https://images.unsplash.com/photo-1547394765-185e1e68f34e?w=800" alt="Gaming computer">
+                <div class="news-info">
+                    <span>سخت‌افزار</span>
+                    <h3>نسل جدید تجهیزات گیمینگ</h3>
+                    <p>نگاهی به دنیای تجهیزات مدرن مخصوص گیمرها.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="about section" id="about">
+        <div class="about-content">
+            <span>ABOUT NEXORA</span>
+            <h2>بیشتر از یک بازی؛ یک دنیای متفاوت!</h2>
+            <p>
+                NEXORA یک دنیای دیجیتال برای علاقه‌مندان به بازی‌های
+                ویدیویی است. اینجا می‌توانی بازی‌های محبوب را پیدا کنی،
+                اخبار جدید را دنبال کنی و با دنیای گیمینگ همراه شوی.
+            </p>
+            <a href="#games" class="main-btn">کشف بازی‌ها</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <h2>NEXORA<span>.</span></h2>
+        <p>دنیای متفاوت گیمرها</p>
+        <p class="copyright">
+            © 2026 NEXORA GAMING | تمامی حقوق محفوظ است.
+        </p>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal" id="gameModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeModal">×</button>
+            <span>GAME INFORMATION</span>
+            <h2 id="modalTitle">نام بازی</h2>
+            <p>این بازی در مجموعه بازی‌های NEXORA قرار دارد.</p>
+            <button class="main-btn" id="modalOk">متوجه شدم</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

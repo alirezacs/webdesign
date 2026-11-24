@@ -350,3 +350,132 @@ let users = ["Alireza", "Mamareza", "Parsa", "Alireza", "Parsa", "Elyana", "Arez
 // bmw.showDetails(); 
 // benz.showDetails();
 
+// class Human{
+//     fName = "Mohammadreza"
+//     lName
+//     email
+
+//     move(){
+//         console.log("Moved!");
+//     }
+// }
+
+// let mohammadReza = new Human();
+
+// console.log(mohammadReza.fName);
+
+/* Constructor */
+// class Human{
+//     constructor(firstName, lastName, email){
+//         this.fName = firstName;
+//         this.lName = lastName;
+//         this.email = email;
+//     }
+
+//     #fName
+//     lName
+//     email
+
+//     move(){
+//         console.log(`${this.fName} ${this.email} was Moved`);
+//     }
+// }
+
+// let mohammadReza = new Human("MohammadReza", "Akbarpoor", "mohammad@gmail.com");
+
+// mohammadReza.move();
+
+
+// class BankAccount{
+//     constructor(balance){
+//         this.balance = balance
+//     }
+
+//     #balance
+
+//     get getBalance(){
+//         return this.balance;
+//     }
+//     set setBalance(value){
+//         this.balance = value;
+//     }
+
+//     increaseBalance(value){
+//         this.balance += value;
+//     }
+// }
+
+// let zhina = new BankAccount(2000000);
+// zhina.setBalance = 9000000;
+// console.log(zhina.getBalance);
+
+/* Inheritance */
+// class Human{
+//     fullName
+
+//     move(){
+//         console.log("Moved!");
+//     }
+// }
+// class Student extends Human{
+//     CodeDaneshjooyi
+// }
+
+// let parsa = new Student();
+
+// class Product{
+//     constructor(title, stock){
+//         this.title = title;
+//         this.stock = stock;
+//     }
+//     title
+//     stock
+
+//     order(){
+//         console.log("Product Order Created");   
+//     }
+// }
+
+// class Plan extends Product{
+//     constructor(title, stock){
+//         super(title, stock);
+//     }
+//     createDate
+    
+//     getExpire(){
+
+//     }
+
+//     order(){
+//         console.log("Plan Opened");
+//     }
+// }
+
+// class TEST extends Plan{
+
+// }
+
+// class Fruit extends Product{
+//     order(){
+//         console.log("Fruit Was Ordered");
+//     }
+// }
+
+// let plan = new Plan("First Plan", 10);
+// plan.order();
+
+/* Polymorphism */
+class Calculate{
+    sum(first, second){
+        console.log(first, second);
+    }
+
+    sum(first, second, third){
+        console.log(first + second + third);
+    }
+}
+
+let calc = new Calculate();
+
+
+calc.sum(10, 20);

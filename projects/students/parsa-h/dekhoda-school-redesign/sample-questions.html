@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="نمونه‌سؤال‌های رشته‌های تحصیلی دبیرستان دهخدا">
+  <title>نمونه‌سؤال‌ها | دبیرستان دهخدا</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="sample-questions.css">
+</head>
+<body class="sample-page theme-light">
+  <div class="sample-topbar"><a href="index.html" class="back-home">← بازگشت به صفحه اصلی</a><span>دبیرستان دوره دوم دهخدا</span></div>
+  <main class="sample-main container">
+    <header class="sample-heading">
+      <span class="section-label">STUDY MATERIALS</span>
+      <h1>مرکز نمونه‌سؤال‌های درسی</h1>
+      <p>رشته تحصیلی خودت را انتخاب کن تا درس‌های مربوط به آن نمایش داده شوند.</p>
+    </header>
+    <section class="track-grid" aria-label="انتخاب رشته">
+      <button class="track-card track-math" type="button" data-track="math">
+        <span class="track-number">01 / MATH</span><span class="track-symbol">∑</span>
+        <strong>ریاضی و فیزیک</strong><small>درس‌های تخصصی رشته ریاضی</small><span class="track-action">مشاهده درس‌ها <b>←</b></span>
+      </button>
+      <button class="track-card track-bio" type="button" data-track="experimental">
+        <span class="track-number">02 / SCIENCE</span><span class="track-symbol">⚛</span>
+        <strong>علوم تجربی</strong><small>درس‌های تخصصی رشته تجربی</small><span class="track-action">مشاهده درس‌ها <b>←</b></span>
+      </button>
+      <button class="track-card track-human" type="button" data-track="humanities">
+        <span class="track-number">03 / HUMANITIES</span><span class="track-symbol">文</span>
+        <strong>علوم انسانی</strong><small>درس‌های تخصصی رشته انسانی</small><span class="track-action">مشاهده درس‌ها <b>←</b></span>
+      </button>
+    </section>
+
+    <section class="subjects-panel" id="subjectsPanel" hidden aria-live="polite">
+      <div class="subjects-panel-head">
+        <div><span class="section-label">SUBJECT LIBRARY</span><h2 id="subjectsTitle">درس‌های رشته</h2><p>برای رفتن به نمونه‌سؤال هر درس، دکمه مشاهده را انتخاب کن.</p></div>
+        <button type="button" class="close-subjects" id="closeSubjects" aria-label="بستن بخش درس‌ها">×</button>
+      </div>
+      <div class="subject-grid" id="subjectGrid"></div>
+    </section>
+    <div class="sample-note"><span>i</span><p>فایل نمونه‌سؤال‌ها هنوز به سایت اضافه نشده است. پس از قرار دادن فایل PDF هر درس در پوشه مربوط، دکمه همان درس به فایل متصل می‌شود.</p></div>
+  </main>
+  <footer class="sample-footer">دبیرستان دهخدا <span>•</span> مسیر دانش، تلاش و موفقیت</footer>
+  <script src="sample-questions.js"></script>
+</body>
+</html>

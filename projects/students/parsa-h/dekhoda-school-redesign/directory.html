@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#071426"><title>دانش‌آموزان برتر و افتخارات | دبیرستان دهخدا</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="directory.css">
+</head>
+<body class="directory-page theme-light">
+  <div class="directory-topbar"><a class="directory-back" href="index.html">← بازگشت به صفحه اصلی</a><span>دبیرستان دوره دوم دهخدا</span></div>
+  <main class="directory-main container">
+    <header class="directory-heading"><span class="section-label" id="directoryEyebrow">STUDENT DIRECTORY</span><h1 id="directoryTitle">دانش‌آموزان برتر</h1><p id="directoryDescription">رشته و پایه تحصیلی را انتخاب کن.</p></header>
+    <section class="directory-track-grid" aria-label="انتخاب رشته">
+      <a class="directory-track" href="?type=students&major=math"><span>01 / MATH</span><b>∑</b><strong>ریاضی و فیزیک</strong><small>دانش‌آموزان و افتخارات رشته</small><i>مشاهده فهرست ←</i></a>
+      <a class="directory-track" href="?type=students&major=experimental"><span>02 / SCIENCE</span><b>⚛</b><strong>علوم تجربی</strong><small>دانش‌آموزان و افتخارات رشته</small><i>مشاهده فهرست ←</i></a>
+      <a class="directory-track" href="?type=students&major=humanities"><span>03 / HUMANITIES</span><b>文</b><strong>علوم انسانی</strong><small>دانش‌آموزان و افتخارات رشته</small><i>مشاهده فهرست ←</i></a>
+    </section>
+    <section class="directory-results" id="directoryResults" hidden aria-live="polite">
+      <div class="directory-results-head"><div><span class="section-label" id="resultsEyebrow">STUDENT LIST</span><h2 id="resultsTitle">فهرست دانش‌آموزان</h2><p id="resultsDescription">اطلاعات هر فرد در کارت جداگانه نمایش داده می‌شود.</p></div><a class="directory-change" href="directory.html">تغییر رشته</a></div>
+      <nav class="grade-tabs" id="gradeTabs" aria-label="انتخاب پایه" hidden><button type="button" class="grade-tab active" data-grade="10">پایه دهم</button><button type="button" class="grade-tab" data-grade="11">پایه یازدهم</button><button type="button" class="grade-tab" data-grade="12">پایه دوازدهم</button></nav>
+      <div class="directory-card-grid" id="directoryCards"></div>
+      <p class="directory-data-note" id="directoryNote"></p>
+    </section>
+  </main>
+  <footer class="directory-footer">دبیرستان دهخدا <span>•</span> مسیر دانش، تلاش و موفقیت</footer>
+  <script src="directory.js"></script>
+</body></html>

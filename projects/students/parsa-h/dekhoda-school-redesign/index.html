@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="وب‌سایت دبیرستان دوره دوم دهخدا">
+  <title>دبیرستان دهخدا | آموزش، تلاش، موفقیت</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="theme-light">
+  <section class="role-gate" id="roleGate" aria-modal="true" role="dialog" aria-labelledby="roleGateTitle">
+    <div class="role-gate-card">
+      <span class="role-gate-mark">D</span>
+      <span class="role-kicker">DEKHODA HIGH SCHOOL</span>
+      <h2 id="roleGateTitle">به وب‌سایت دبیرستان دهخدا خوش آمدید</h2>
+      <p>برای ورود، نوع دسترسی خود را انتخاب کنید.</p>
+      <div class="role-options" id="roleOptions">
+        <button type="button" class="role-option" id="managerChoice">
+          <span class="role-option-icon">♙</span><strong>مدیر مدرسه</strong>
+          <small>ورود با نام کاربری و رمز عبور</small><b>ورود به پنل مدیریت ←</b>
+        </button>
+        <button type="button" class="role-option" data-role="student">
+          <span class="role-option-icon">▤</span><strong>دانش‌آموز</strong>
+          <small>مشاهده اطلاعیه‌های مدرسه</small>
+          <b>ورود به وب‌سایت ←</b>
+        </button>
+      </div>
+      <form class="manager-login" id="managerLogin" hidden>
+        <h3>ورود مدیر مدرسه</h3>
+        <label for="managerName">نام مدیر</label>
+        <input id="managerName" name="managerName" type="text" autocomplete="username" placeholder="نام و نام خانوادگی" required>
+        <label for="managerPassword">رمز عبور</label>
+        <input id="managerPassword" name="managerPassword" type="password" autocomplete="current-password" placeholder="رمز عبور" required>
+        <p class="login-error" id="managerLoginError" role="alert" hidden>نام یا رمز عبور اشتباه است.</p>
+        <button class="manager-login-submit" type="submit">ورود به پنل مدیریت</button>
+        <button class="manager-login-back" id="managerLoginBack" type="button">بازگشت به انتخاب نقش</button>
+      </form>
+      <small class="role-gate-foot">دبیرستان دوره دوم دهخدا · آموزش، تلاش، موفقیت</small>
+    </div>
+  </section>
+
+  <div class="topbar">
+    <div class="container topbar-content">
+      <span>دبیرستان دوره دوم دهخدا</span>
+      <span>آموزش، تلاش، آینده‌ای روشن ✨</span>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="container header-content">
+      <a href="#home" class="brand">
+        <img src="img/dekhoda-logo.png" alt="لوگوی دبیرستان دهخدا">
+        <div>
+          <h1>دبیرستان دهخدا</h1>
+          <span>دوره دوم متوسطه</span>
+        </div>
+      </a>
+
+      <div class="header-actions">
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="تغییر حالت شب و روز" title="حالت شب و روز">🌙 <span>حالت شب</span></button>
+        <button class="menu-toggle" id="menuToggle" aria-label="باز کردن منو">☰</button>
+      </div>
+
+
+      <nav class="nav icon-nav" id="mainNav" aria-label="منوی اصلی">
+        <a href="#home" aria-label="خانه" title="خانه">
+          <span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z" />
+            </svg></span>
+          <span class="nav-delivery"><span>خانه</span></span>
+        </a>
+        <a href="#about" aria-label="درباره مدرسه" title="درباره مدرسه">
+          <span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="8" r="3" />
+              <path d="M5 20a7 7 0 0 1 14 0" />
+            </svg></span>
+          <span class="nav-delivery"><span>درباره مدرسه</span></span>
+        </a>
+        <a href="#notices" aria-label="اطلاعیه‌ها" title="اطلاعیه‌ها">
+          <span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4" />
+            </svg></span>
+          <span class="nav-delivery"><span>اطلاعیه‌ها</span></span>
+        </a>
+        <a href="#management" aria-label="کادر اجرایی" title="کادر اجرایی">
+          <span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="9" cy="8" r="3" />
+              <path d="M3 20a6 6 0 0 1 12 0M16 5a3 3 0 0 1 0 6m2 3a5 5 0 0 1 3 5" />
+            </svg></span>
+          <span class="nav-delivery"><span>کادر اجرایی</span></span>
+        </a>
+        <a href="#majors" aria-label="رشته‌ها" title="رشته‌ها">
+          <span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 7 12 3l9 4-9 4zM6 9v6c3 3 9 3 12 0V9M21 7v7" />
+            </svg></span>
+          <span class="nav-delivery"><span>رشته‌ها</span></span>
+        </a>
+        <a href="#education" aria-label="کادر آموزشی" title="کادر آموزشی">
+          <span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 5h18v14H3zM7 9h10M7 13h7M7 17h4" />
+            </svg></span>
+          <span class="nav-delivery"><span>کادر آموزشی</span></span>
+        </a>
+        <a href="#students" aria-label="دانش‌آموزان برتر" title="دانش‌آموزان برتر">
+          <span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m12 3 2.5 5 5.5.8-4 3.9.9 5.5-4.9-2.6-4.9 2.6.9-5.5-4-3.9 5.5-.8z" />
+            </svg></span>
+          <span class="nav-delivery"><span>دانش‌آموزان برتر</span></span>
+        </a>
+        <a href="#achievements" aria-label="افتخارات" title="افتخارات">
+          <span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="8" r="5" />
+              <path d="M8 12 7 21l5-3 5 3-1-9" />
+            </svg></span>
+          <span class="nav-delivery"><span>افتخارات</span></span>
+        </a>
+        <a href="#store" aria-label="فروشگاه" title="فروشگاه">
+          <span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 8h16l-1 13H5L4 8zM3 8l2-5h14l2 5M9 8a3 3 0 0 0 6 0" />
+            </svg></span>
+          <span class="nav-delivery"><span>فروشگاه</span></span>
+        </a>
+        <a href="sample-questions.html" aria-label="نمونه‌سؤال‌ها" title="نمونه‌سؤال‌ها">
+          <span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 3h9l4 4v14H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z" />
+              <path d="M14 3v5h5M8 12h8M8 16h8" />
+            </svg></span>
+          <span class="nav-delivery"><span>نمونه‌سؤال‌ها</span></span>
+        </a>
+        <a href="#contact" aria-label="تماس" title="تماس">
+          <span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 5a2 2 0 0 1 2-2h2l2 5-2 2a15 15 0 0 0 6 6l2-2 5 2v2a2 2 0 0 1-2 2C10 20 4 14 4 5z" />
+            </svg></span>
+          <span class="nav-delivery"><span>تماس</span></span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-overlay"></div>
+      <div class="hero-stars-label">✦ THE UNIVERSE OF KNOWLEDGE ✦</div>
+      <div class="container hero-content">
+        <div class="hero-text">
+          <span class="hero-label">دبیرستان دوره دوم متوسطه</span>
+          <h2>دبیرستان دهخدا<br><span>مسیر دانش، تلاش و موفقیت</span></h2>
+          <p>محیطی پویا برای یادگیری، پرورش استعدادها، تقویت مهارت‌های علمی و آماده‌سازی دانش‌آموزان برای آینده‌ای موفق.
+          </p>
+          <div class="hero-buttons">
+            <a href="#about" class="btn btn-gold">آشنایی با مدرسه</a>
+            <a href="#notices" class="btn btn-outline">مشاهده اطلاعیه‌ها</a>
+          </div>
+        </div>
+        <div class="hero-side-card">
+          <span class="hero-card-line"></span>
+          <span class="hero-card-title">چشم‌انداز آموزشی</span>
+          <h3>دانش و مسئولیت‌پذیری</h3>
+          <p>پرورش نسلی آگاه، توانمند و مسئولیت‌پذیر با تکیه بر آموزش باکیفیت.</p>
+          <div class="hero-shortcuts" aria-label="دسترسی سریع به بخش‌های مدرسه">
+            <a href="#education"><span>♙</span> کادر آموزشی</a>
+            <a href="#store"><span>✧</span> محصولات</a>
+            <a href="#majors"><span>⌘</span> رشته‌ها</a>
+            <a href="#students"><span>★</span> دانش‌آموزان برتر</a>
+            <a href="sample-questions.html"><span>⇩</span> نمونه‌سؤال‌ها</a>
+          </div>
+        </div>
+      </div>
+      <div class="hero-bottom">
+        <div class="container hero-bottom-content">
+          <span>تعهد به آموزش باکیفیت</span>
+          <span>توجه به استعدادهای فردی</span>
+          <span>تلاش برای موفقیت تحصیلی</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section notices-section" id="notices">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="section-label">اخبار و اطلاع‌رسانی</span>
+            <h2>آخرین اطلاعیه‌های مدرسه</h2>
+          </div>
+          <span class="heading-decoration"></span>
+        </div>
+        <div class="notices-layout">
+          <article class="notice-featured">
+            <div class="notice-featured-top">
+              <span class="notice-badge">اطلاعیه مهم</span>
+              <span class="notice-icon">✦</span>
+            </div>
+            <div class="notice-featured-content">
+              <span class="notice-date">اطلاعیه مدرسه</span>
+              <h3>اطلاع‌رسانی برنامه‌های آموزشی</h3>
+              <p>دانش‌آموزان و اولیای گرامی می‌توانند آخرین اخبار، برنامه‌های آموزشی و اطلاعیه‌های مدرسه را از این بخش
+                دنبال کنند.</p>
+              <span class="notice-footer">روابط عمومی دبیرستان دهخدا</span>
+            </div>
+          </article>
+          <div class="notice-list" id="noticeList" aria-live="polite"></div>
+        </div>
+
+        <details class="notice-admin" id="noticeAdminPanel" hidden>
+          <summary><span class="admin-summary-icon">＋</span><span>مدیریت و ثبت اطلاعیه جدید</span><small>پنل انتشار
+              اطلاعیه</small></summary>
+          <form id="noticeForm" class="notice-form">
+            <div class="notice-form-heading">
+              <span class="section-label">SCHOOL ANNOUNCEMENTS</span>
+              <h3>اطلاعیه تازه منتشر کن</h3>
+              <p>عنوان و متن اطلاعیه را وارد کن تا در همین بخش نمایش داده شود.</p>
+            </div>
+            <label for="noticeTitle">عنوان اطلاعیه</label>
+            <input id="noticeTitle" name="title" type="text" maxlength="90" placeholder="مثلاً زمان‌بندی امتحانات"
+              required>
+            <label for="noticeDescription">متن اطلاعیه</label>
+            <textarea id="noticeDescription" name="description" rows="4" maxlength="1200"
+              placeholder="متن اطلاعیه را اینجا بنویس..." required></textarea>
+            <div class="notice-form-bottom">
+              <span class="notice-local-note">ذخیره در همین مرورگر</span>
+              <button type="submit" class="notice-submit">انتشار اطلاعیه <span>↗</span></button>
+            </div>
+            <p class="notice-admin-hint">توجه: این نسخه اطلاعیه‌ها را فقط در همین مرورگر ذخیره می‌کند. برای نمایش
+              اطلاعیه‌ها به همه بازدیدکنندگان سایت، باید پنل به سرور و پایگاه داده متصل شود.</p>
+          </form>
+        </details>
+      </div>
+    </section>
+
+    <section class="section about-section" id="about">
+      <div class="container about-layout">
+        <div class="about-image">
+          <img src="images/school.jpg" alt="تصویر دبیرستان دهخدا">
+          <div class="about-image-caption">
+            <strong>دبیرستان دهخدا</strong>
+            <span>دوره دوم متوسطه</span>
+          </div>
+        </div>
+        <div class="about-text">
+          <span class="section-label">آشنایی با مجموعه</span>
+          <h2>درباره دبیرستان دهخدا</h2>
+          <p>دبیرستان دهخدا با هدف فراهم کردن بستری مناسب برای رشد علمی، آموزشی و شخصیتی دانش‌آموزان فعالیت می‌کند.</p>
+          <p>توجه به کیفیت آموزش، تقویت روحیه پژوهشگری، پرورش استعدادهای فردی و ایجاد فضای مناسب برای پیشرفت تحصیلی از
+            اهداف مهم مجموعه آموزشی است.</p>
+          <a href="#contact" class="text-link">ارتباط با مدرسه ←</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section management-section" id="management">
+      <div class="container">
+        <div class="section-heading centered">
+          <div>
+            <span class="section-label">مدیریت و امور اجرایی</span>
+            <h2>کادر اجرایی مدرسه</h2>
+            <p>معرفی مسئولان و عوامل اجرایی دبیرستان</p>
+          </div>
+        </div>
+        <div class="management-grid">
+          <article class="person-card">
+            <img src="images/manager.jpg" alt="مدیر مدرسه">
+            <span class="person-role">مدیریت</span>
+            <h3>نام مدیر</h3>
+            <p>مدیر دبیرستان دهخدا</p>
+          </article>
+          <article class="person-card">
+            <img src="images/deputy1.jpg" alt="معاون آموزشی">
+            <span class="person-role">معاونت آموزشی</span>
+            <h3>نام معاون اول</h3>
+            <p>امور آموزشی و تحصیلی</p>
+          </article>
+          <article class="person-card">
+            <img src="images/deputy2.jpg" alt="معاون پرورشی">
+            <span class="person-role">معاونت پرورشی</span>
+            <h3>نام معاون دوم</h3>
+            <p>امور فرهنگی و پرورشی</p>
+          </article>
+          <article class="person-card">
+            <img src="images/deputy3.jpg" alt="معاون اجرایی">
+            <span class="person-role">معاونت اجرایی</span>
+            <h3>نام معاون سوم</h3>
+            <p>امور اجرایی و اداری</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section majors-section" id="majors">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="section-label">مسیرهای تحصیلی</span>
+            <h2>رشته‌های تحصیلی</h2>
+            <p>آشنایی با رشته‌های دوره دوم متوسطه</p>
+          </div>
+        </div>
+        <div class="majors-grid">
+          <article class="major-card">
+            <div class="major-number">01</div>
+            <div class="major-icon">📐</div>
+            <h3>ریاضی و فیزیک</h3>
+            <p>تقویت توانایی‌های تحلیلی، محاسباتی و علمی در حوزه ریاضیات و علوم پایه.</p>
+            <a href="teachers.html?major=math">معرفی دبیران و دانش‌آموزان ←</a>
+          </article>
+          <article class="major-card">
+            <div class="major-number">02</div>
+            <div class="major-icon">🧬</div>
+            <h3>علوم تجربی</h3>
+            <p>مطالعه علوم زیستی، شیمی، فیزیک و تقویت مهارت‌های علمی و پژوهشی.</p>
+            <a href="teachers.html?major=experimental">معرفی دبیران و دانش‌آموزان ←</a>
+          </article>
+          <article class="major-card">
+            <div class="major-number">03</div>
+            <div class="major-icon">📚</div>
+            <h3>علوم انسانی</h3>
+            <p>آشنایی با علوم اجتماعی، ادبیات، تاریخ، اقتصاد و مباحث انسانی.</p>
+            <a href="teachers.html?major=humanities">معرفی دبیران و دانش‌آموزان ←</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section education-section" id="education">
+      <div class="container">
+        <div class="section-heading centered">
+          <div>
+            <span class="section-label">آموزش و یادگیری</span>
+            <h2>کادر آموزشی مدرسه</h2>
+            <p>معرفی دبیران به تفکیک رشته تحصیلی</p>
+          </div>
+        </div>
+        <div class="education-grid">
+          <a class="education-card" href="teachers.html?major=math">
+            <span class="education-symbol">📐</span>
+            <div>
+              <h3>دبیران ریاضی و فیزیک</h3>
+              <p>معرفی دبیران و حوزه تدریس</p>
+            </div>
+            <span class="education-arrow">←</span>
+          </a>
+          <a class="education-card" href="teachers.html?major=experimental">
+            <span class="education-symbol">🧬</span>
+            <div>
+              <h3>دبیران علوم تجربی</h3>
+              <p>معرفی دبیران و حوزه تدریس</p>
+            </div>
+            <span class="education-arrow">←</span>
+          </a>
+          <a class="education-card" href="teachers.html?major=humanities">
+            <span class="education-symbol">📚</span>
+            <div>
+              <h3>دبیران علوم انسانی</h3>
+              <p>معرفی دبیران و حوزه تدریس</p>
+            </div>
+            <span class="education-arrow">←</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section students-section" id="students">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="section-label">افتخارآفرینان مدرسه</span>
+            <h2>دانش‌آموزان برتر مدرسه</h2>
+            <p>معرفی دانش‌آموزان برتر هر رشته</p>
+          </div>
+        </div>
+        <div class="achievement-grid">
+          <a class="achievement-card" href="directory.html?type=students&major=math">
+            <div class="achievement-image"><img src="images/student1.jpg" alt="دانش‌آموزان ریاضی"></div>
+            <div class="achievement-content"><span>گروه اول</span>
+              <h3>دانش‌آموزان برتر ریاضی و فیزیک</h3>
+              <p>مشاهده اسامی و افتخارات</p>
+            </div>
+            <span class="achievement-arrow">←</span>
+          </a>
+          <a class="achievement-card" href="directory.html?type=students&major=experimental">
+            <div class="achievement-image"><img src="images/student2.jpg" alt="دانش‌آموزان تجربی">پارسا دهقان</div>
+            <div class="achievement-content"><span>گروه دوم</span>
+              <h3>دانش‌آموزان برتر علوم تجربی</h3>
+              <p>مشاهده اسامی و افتخارات</p>
+            </div>
+            <span class="achievement-arrow">←</span>
+          </a>
+          <a class="achievement-card" href="directory.html?type=students&major=humanities">
+            <div class="achievement-image"><img src="images/student3.jpg" alt="دانش‌آموزان انسانی"></div>
+            <div class="achievement-content"><span>گروه سوم</span>
+              <h3>دانش‌آموزان برتر علوم انسانی</h3>
+              <p>مشاهده اسامی و افتخارات</p>
+            </div>
+            <span class="achievement-arrow">←</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section honors-section" id="achievements">
+      <div class="container">
+        <div class="section-heading centered">
+          <div>
+            <span class="section-label">موفقیت‌های تحصیلی</span>
+            <h2>دانش‌آموزان کنکوری و افتخارات</h2>
+            <p>معرفی رتبه‌ها و موفقیت‌های کنکور به تفکیک رشته</p>
+          </div>
+        </div>
+        <div class="honors-grid">
+          <a href="directory.html?type=honors&major=math" class="honor-card">
+            <img src="images/konkur1.jpg" alt="افتخارات کنکور ریاضی">
+            <span class="honor-label">ریاضی و فیزیک</span>
+            <h3>افتخارات کنکور رشته ریاضی</h3>
+            <p>مشاهده رتبه‌ها و موفقیت‌ها</p>
+          </a>
+          <a href="directory.html?type=honors&major=experimental" class="honor-card">
+            <img src="images/konkur2.jpg" alt="افتخارات کنکور تجربی">
+            <span class="honor-label">علوم تجربی</span>
+            <h3>افتخارات کنکور رشته تجربی</h3>
+            <p>مشاهده رتبه‌ها و موفقیت‌ها</p>
+          </a>
+          <a href="directory.html?type=honors&major=humanities" class="honor-card">
+            <img src="images/konkur3.jpg" alt="افتخارات کنکور انسانی">
+            <span class="honor-label">علوم انسانی</span>
+            <h3>افتخارات کنکور رشته انسانی</h3>
+            <p>مشاهده رتبه‌ها و موفقیت‌ها</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- فروشگاه -->
+    <section class="section store-section" id="store">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="section-label">فروشگاه دانش‌آموزی</span>
+            <h2>فروشگاه دبیرستان دهخدا 🛍️</h2>
+            <p>محصولات آموزشی، فرهنگی و لوازم موردنیاز دانش‌آموزان</p>
+          </div>
+          <button class="cart-open" id="viewCart">🛒 سبد خرید <span id="cartCount">۰</span></button>
+        </div>
+
+        <div class="store-filters">
+          <button class="store-filter active" data-filter="all">همه محصولات</button>
+          <button class="store-filter" data-filter="stationery">لوازم‌التحریر</button>
+          <button class="store-filter" data-filter="books">کتاب و آموزش</button>
+          <button class="store-filter" data-filter="culture">فرهنگی</button>
+        </div>
+
+        <div class="products-grid">
+          <article class="product-card" data-category="stationery">
+            <div class="product-visual product-purple">✏️</div>
+            <span class="product-tag">لوازم‌التحریر</span>
+            <h3>بسته نوشت‌افزار دانش‌آموزی</h3>
+            <p>مجموعه‌ای کاربردی برای شروع سال تحصیلی</p>
+            <div class="product-bottom"><strong>۱۸۰٬۰۰۰ تومان</strong><button class="add-to-cart"
+                data-product="بسته نوشت‌افزار دانش‌آموزی" data-price="180000">افزودن +</button></div>
+          </article>
+          <article class="product-card" data-category="books">
+            <div class="product-visual product-blue">📘</div>
+            <span class="product-tag">کتاب و آموزش</span>
+            <h3>دفتر برنامه‌ریزی درسی</h3>
+            <p>برای نظم دادن به مطالعه و تکالیف روزانه</p>
+            <div class="product-bottom"><strong>۹۵٬۰۰۰ تومان</strong><button class="add-to-cart"
+                data-product="دفتر برنامه‌ریزی درسی" data-price="95000">افزودن +</button></div>
+          </article>
+          <article class="product-card" data-category="stationery">
+            <div class="product-visual product-pink">🎒</div>
+            <span class="product-tag">لوازم‌التحریر</span>
+            <h3>جامدادی دانش‌آموزی</h3>
+            <p>جامدادی سبک و مناسب استفاده روزمره</p>
+            <div class="product-bottom"><strong>۱۴۰٬۰۰۰ تومان</strong><button class="add-to-cart"
+                data-product="جامدادی دانش‌آموزی" data-price="140000">افزودن +</button></div>
+          </article>
+          <article class="product-card" data-category="books">
+            <div class="product-visual product-green">📗</div>
+            <span class="product-tag">کتاب و آموزش</span>
+            <h3>دفتر یادداشت آموزشی</h3>
+            <p>مناسب یادداشت نکات مهم کلاس‌ها</p>
+            <div class="product-bottom"><strong>۷۰٬۰۰۰ تومان</strong><button class="add-to-cart"
+                data-product="دفتر یادداشت آموزشی" data-price="70000">افزودن +</button></div>
+          </article>
+          <article class="product-card" data-category="culture">
+            <div class="product-visual product-orange">🏅</div>
+            <span class="product-tag">فرهنگی</span>
+            <h3>نشان یادبود مدرسه</h3>
+            <p>یادگاری فرهنگی با نشان دبیرستان</p>
+            <div class="product-bottom"><strong>۵۵٬۰۰۰ تومان</strong><button class="add-to-cart"
+                data-product="نشان یادبود مدرسه" data-price="55000">افزودن +</button></div>
+          </article>
+          <article class="product-card" data-category="culture">
+            <div class="product-visual product-yellow">🗓️</div>
+            <span class="product-tag">فرهنگی</span>
+            <h3>تقویم رومیزی آموزشی</h3>
+            <p>برای برنامه‌ریزی بهتر فعالیت‌های مدرسه</p>
+            <div class="product-bottom"><strong>۱۱۰٬۰۰۰ تومان</strong><button class="add-to-cart"
+                data-product="تقویم رومیزی آموزشی" data-price="110000">افزودن +</button></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <aside class="cart-panel" id="cartPanel" aria-label="سبد خرید">
+      <div class="cart-header">
+        <h2>🛒 سبد خرید شما</h2>
+        <button id="closeCart" aria-label="بستن">✕</button>
+      </div>
+      <div id="cartItems" class="cart-items">
+        <p class="empty-cart">سبد خرید شما خالی است.</p>
+      </div>
+      <div class="cart-summary">
+        <span>مبلغ کل:</span>
+        <strong id="cartTotal">۰ تومان</strong>
+      </div>
+      <button id="checkoutButton" class="checkout-button">ثبت سفارش آزمایشی</button>
+      <p class="cart-note">این فروشگاه نمونه است و پرداخت آنلاین واقعی ندارد.</p>
+    </aside>
+    <div class="cart-backdrop" id="cartBackdrop"></div>
+  </main>
+
+  <footer class="footer" id="contact">
+    <div class="container footer-grid">
+      <div class="footer-about">
+        <div class="footer-brand">
+          <img src="img/dekhoda-logo.png" alt="لوگوی مدرسه">
+          <h3>دبیرستان دهخدا</h3>
+        </div>
+        <p>دبیرستان دوره دوم دهخدا؛ بستری برای آموزش، رشد علمی، پرورش استعدادها و حرکت در مسیر موفقیت.</p>
+      </div>
+      <div class="footer-links">
+        <h3>دسترسی سریع</h3>
+        <a href="#home">صفحه اصلی</a>
+        <a href="#about">درباره مدرسه</a>
+        <a href="#notices">اطلاعیه‌ها</a>
+        <a href="#management">کادر اجرایی</a>
+        <a href="#education">کادر آموزشی</a>
+      </div>
+      <div class="footer-links">
+        <h3>بخش‌های دانش‌آموزان</h3>
+        <a href="#students">دانش‌آموزان برتر</a>
+        <a href="#achievements">افتخارات کنکور</a>
+        <a href="#majors">رشته‌های تحصیلی</a>
+        <a href="#store">فروشگاه مدرسه</a>
+        <a href="sample-questions.html">نمونه‌سؤال‌ها</a>
+      </div>
+      <div class="footer-contact">
+        <h3>ارتباط با مدرسه</h3>
+        <p>نشانی: ملارد، مارلیک، فاز سه شمشاد، پشت کلانتری ۱۷</p>
+        <p>تلفن: شماره تماس مدرسه</p>
+        <p>ایمیل: آدرس ایمیل مدرسه</p>
+        <p>ساعات پاسخگویی: مطابق برنامه اداری مدرسه</p>
+      </div>
+    </div>
+    <section class="school-map-section" aria-labelledby="schoolMapTitle">
+      <div class="container school-map-layout">
+        <div class="school-map-info">
+          <span class="section-label">FIND OUR SCHOOL</span>
+          <h3 id="schoolMapTitle">موقعیت دبیرستان دهخدا</h3>
+          <p>تهران، ملارد، مارلیک، فاز سه شمشاد، خیابان پشت کلانتری ۱۷، دبیرستان دهخدا ۲</p>
+          <a class="map-directions"
+            href="https://www.google.com/maps/search/?api=1&amp;query=%D8%AF%D8%A8%DB%8C%D8%B1%D8%B3%D8%AA%D8%A7%D9%86%20%D8%AF%D9%87%D8%AE%D8%AF%D8%A7%202%20%D9%85%D9%84%D8%A7%D8%B1%D8%AF%20%D9%81%D8%A7%D8%B2%20%D8%B3%D9%87%20%D8%B4%D9%85%D8%B4%D8%A7%D8%AF"
+            target="_blank" rel="noopener">مسیریابی در نقشه <span>↗</span></a>
+        </div>
+        <div class="school-map-frame">
+          <iframe title="نقشه موقعیت دبیرستان دهخدا در ملارد"
+            src="https://www.google.com/maps?q=%D8%AF%D8%A8%DB%8C%D8%B1%D8%B3%D8%AA%D8%A7%D9%86%20%D8%AF%D9%87%D8%AE%D8%AF%D8%A7%202%20%D9%85%D9%84%D8%A7%D8%B1%D8%AF%20%D9%81%D8%A7%D8%B2%20%D8%B3%D9%87%20%D8%B4%D9%85%D8%B4%D8%A7%D8%AF%20%D8%AE%DB%8C%D8%A7%D8%A8%D8%A7%D9%86%20%D9%BE%D8%B4%D8%AA%20%DA%A9%D9%84%D8%A7%D9%86%D8%AA%D8%B1%DB%8C%2017&amp;output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <span>تمامی حقوق این وب‌سایت متعلق به دبیرستان دهخدا است.</span>
+        <span>طراحی و توسعه وب‌سایت مدرسه</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

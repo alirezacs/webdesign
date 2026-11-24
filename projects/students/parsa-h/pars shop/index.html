@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پارس شاپ</title>
+    <style>
+        body{
+            background-color: rgb(233, 252, 246);
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        img{
+            width: 100%;
+        }
+     
+        header{
+            /* background-color: #333; */
+            height: 50vh;
+            color: #e6e6e6;
+            background-image: url(img/Gif\ baner.gif);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        body{
+            text-align: center;
+            background-color: #333;
+            color: #f2f2f2;
+        }
+        
+       
+        header>div{
+            width: 50%;
+            padding: 15px;
+            text-align: center;
+            background-color: rgba(0,0,0,.5);
+            border-radius: 5px;
+        }
+        main{
+            display: flex;
+            /* flex-direction: row; */
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-top: 30px;
+        }
+        main>section{
+            flex: 1;
+            padding: 15px;
+            border: 1px solid #003007;
+            border-radius: 5px;
+            text-align: center;
+        }
+        main>section>a{
+            display: block;
+            padding: 15px 30px;
+            width: 150px;
+            text-decoration: none;
+            border-radius: 15px;
+            text-align: center;
+            background-color: #aaa;
+            color: #333;
+            margin: 15px auto;
+            transition: all 0.6s;
+            font-size: large;
+        }
+        main>section>a:hover{
+            background-color: #333;
+            color: #f2f2f2;
+            box-shadow: 5px 5px 10px #111;
+        }
+        header>div>a{
+            display: block;
+            padding: 15px 30px;
+            width: 150px;
+            text-decoration: none;
+            border-radius: 15px;
+            text-align: center;
+            background-color: #aaa;
+            color: #333;
+            margin: 15px auto;
+            transition: all ;
+            font-size: medium;
+        }
+        footer{
+            background-color: #333;
+            font-size: x-large;
+            padding: 30px;
+            text-align: center;
+            margin: 20px;
+        }
+        @media(max-width:768px){
+            main{
+                flex-direction: column;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <h1>header</h1>
+    <header>
+        <div>
+            <h1>تخفیف ها</h1>
+            <p>تخفیف های ویژه سال</p>
+            <a href="index1.html">اطلاعات بیشتر...</a>
+        </div>
+        
+    </header>
+    <!-- OMID: Business Cards -->
+    <main>
+        <section>
+            <img src="img/hobobat.jpg" alt="">
+            <h2>حبوبات</h2>
+            <a href="index2.html">کالا های مشابه</a>
+        </section>
+        <section>
+            <img src="img/labaniat.jpg" alt="">
+           <h2>لبنیات</h2>
+            <a href="index3.html">کالا های مشابه</a>
+        </section>
+        <section>
+            <img src="img/protein.jpg " alt="" height="295px">
+            <h2>پروتئین</h2>
+            <a href="index4.html">کالا های مشابه</a>
+        </section>
+        <section>
+            <img src="img/images.jpg" alt="">
+            <h2>پوشاک</h2>
+        
+            <a href="index5.html">کالا های مشابه</a>
+        </section>
+    </main>
+    <footer>footer</footer>
+    
+</body>
+</html>
